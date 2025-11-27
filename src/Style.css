@@ -1,0 +1,56 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(249red, 250, 251);
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.container {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.my-form {
+  width: 450px;
+  height: 550px;
+  border: none;
+  border-radius: 5%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.img {
+  display: block;
+  width: 120px;
+  height: auto;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.font {
+  text-align: center;
+  font-size: 20px;
+  font-weight: 40px;
+  padding-top: 20px;
+  direction: rtl;
+}
+
+.my-label{
+ direction: rtl;
+  margin: 15px;
+}
+
+.my-input{
+  text-align: left;
+}
+
+.Button{
+  height: 40px;
+}
+
+.p-button{
+  padding-top: 10px;
+  color: gray;
+  text-align: center;
+}
