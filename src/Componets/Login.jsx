@@ -1,6 +1,7 @@
 import React , {useEffect , useState} from 'react'
 import { Form, Input, Button } from 'antd'
 import { PhoneOutlined } from "@ant-design/icons"; // آیکون تلفن
+import Formbutton from './Formbutton'
 
 
 export default function Login() {
@@ -38,9 +39,7 @@ setisDisabled(true)
                 </Form.Item>
 
                 <Form.Item >
-                    <Button disabled={isDisabled} type="primary" block className='big-btn'>
-                        ورود به پنل
-                    </Button>
+                    <Formbutton disabled={isDisabled} text='ورود به پنل'/>
                     <p style={{ marginTop: '5%', color: 'gray' }}>رمز عبور خود را فراموش کرده اید؟</p>
                 </Form.Item>
 

@@ -1,5 +1,6 @@
-import React from 'react'
-import { Form , Button} from "antd";
+import { Form, Button } from "antd";
+import Formbutton from './Formbutton'
+import React, { useState, useEffect } from 'react';
 
 export default function OTP() {
     return (
@@ -10,7 +11,7 @@ export default function OTP() {
                 <p className='color' >کد 4 یا 6 رقمی برای شماره <b>0912xxx4567</b> ارسال شد</p>
                 <p className='color' >نقش :</p>
                 <p className='p-padding' style={{ fontSize: 16 }}>کد تایید را وارد کنید</p>
-                <div className="otp-inputs">
+                <div className="otp-inputs" >
                     {[...Array(6)].map((_, i) => (
                         <input
                             key={i}
@@ -22,9 +23,7 @@ export default function OTP() {
                 </div>
                 <p className='p-padding color' >کد را دریافت نکردید؟ ارسال مجدد (3 بار مانده)</p>
                 <Form.Item >
-                    <Button  type="primary" block className='big-btn'>
-                       تایید و ورود
-                    </Button>
+                    <Formbutton text='تایید و ورود' />
                     <p style={{ marginTop: '5%', color: 'gray' }}>بازگشت به صفحه ورود</p>
                 </Form.Item>
             </Form>
