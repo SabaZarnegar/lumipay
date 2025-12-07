@@ -1,8 +1,8 @@
 import React from 'react'
-import OTP from './Componets/OTP'
+import Login from './Componets/Login'
 
 export default function App() {
   return (
-    <OTP/>
+    <Login/>
   )
 }
