@@ -2,6 +2,8 @@ import { Form, Button } from "antd";
 import Formbutton from './Formbutton'
 import React, { useState, useEffect } from 'react';
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 
 export default function OTP() {
@@ -9,6 +11,12 @@ export default function OTP() {
 const location = useLocation();
 const role = location.state?.role;
 const phone = location.state?.phone;
+const navigate = useNavigate();
+
+function HandleBack(){
+    navigate("/Login");
+
+}
 
     return (
         <div className='container'>
@@ -31,7 +39,7 @@ const phone = location.state?.phone;
                 <p className='p-padding color' >کد را دریافت نکردید؟ ارسال مجدد (3 بار مانده)</p>
                 <Form.Item >
                     <Formbutton text='تایید و ورود' />
-                    <p style={{ marginTop: '5%', color: 'gray' }}>بازگشت به صفحه ورود</p>
+                    <p style={{ marginTop: '5%', color: 'gray' }} onClick={HandleBack}>بازگشت به صفحه ورود </p>
                 </Form.Item>
             </Form>
         </div>
