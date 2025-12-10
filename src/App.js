@@ -1,8 +1,14 @@
-import React from 'react'
+import { HashRouter, Routes, Route } from "react-router-dom";
 import Login from './Componets/Login'
+import OTP from './Componets/OTP'
 
 export default function App() {
   return (
-    <Login/>
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/OTP" element={<OTP />} />
+      </Routes>
+    </HashRouter>
   )
 }
