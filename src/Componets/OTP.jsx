@@ -8,15 +8,37 @@ import { useNavigate } from "react-router-dom";
 
 export default function OTP() {
 
-const location = useLocation();
-const role = location.state?.role;
-const phone = location.state?.phone;
-const navigate = useNavigate();
+    const location = useLocation();
+    const { phone, role, otp } = location.state || {};
+    const navigate = useNavigate();
 
-function HandleBack(){
-    navigate("/Login");
+    const [enteredOtp, setEnteredOtp] = useState(Array(6).fill(""));
 
-}
+    
+
+    function handleOtpChange(index, value) {
+        if (!/^\d?$/.test(value)) return;
+
+        const newOtp = [...enteredOtp];
+        newOtp[index] = value;
+        setEnteredOtp(newOtp);
+    }
+
+    function handleVerifyOtp() {
+        const finalOtp = enteredOtp.join("");
+
+        if (finalOtp === String(otp)) {
+            alert("ورود موفق 🎉");
+        } else {
+            alert("کد تایید اشتباه است");
+        }
+    }
+
+
+    function HandleBack() {
+        navigate("/Login");
+    }
+
 
     return (
         <div className='container'>
@@ -33,13 +55,15 @@ function HandleBack(){
                             type="text"
                             maxLength="1"
                             className="otp-box"
+                            value={enteredOtp[i]}
+                            onChange={(e => handleOtpChange(i, e.target.value))}
                         />
                     ))}
                 </div>
                 <p className='p-padding color' >کد را دریافت نکردید؟ ارسال مجدد (3 بار مانده)</p>
                 <Form.Item >
-                    <Formbutton text='تایید و ورود' />
-                    <p style={{ marginTop: '5%', color: 'gray' }} onClick={HandleBack}>بازگشت به صفحه ورود </p>
+                    <Formbutton text='تایید و ورود' onClick={handleVerifyOtp} />
+                    <p className="hover-text" style={{ marginTop: '5%', color: 'gray' }} onClick={HandleBack}>بازگشت به صفحه ورود </p>
                 </Form.Item>
             </Form>
         </div>

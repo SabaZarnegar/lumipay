@@ -62,6 +62,7 @@ img {
   justify-content: space-between;
   margin-top: 20px;
   gap: 10px;
+  direction: ltr; /* اضافه کن */
 }
 
 .otp-box {
@@ -82,4 +83,10 @@ img {
 
 .color{
   color: gray;
+}
+
+.hover-text:hover {
+  /* هر بلایی می‌خوای سرش بیاری */
+  color: rgb(22, 13, 13);
+  transition: 2s;
 }

@@ -9,7 +9,10 @@ export default function Login() {
     const [password, setpassword] = useState("");
     const [isDisabled, setisDisabled] = useState(true);
     const navigate = useNavigate();
+
     
+    const fakeOtp = "123456";
+
 
     useEffect(() => {
         if (phone.trim() !== "" && password.trim().length >= 6) {
@@ -19,8 +22,10 @@ export default function Login() {
         }
     }, [password, phone]);
 
+
+
     function handleLogin() {
-      fetch("https://69340e624090fe3bf01ec632.mockapi.io/login")
+        fetch("https://69340e624090fe3bf01ec632.mockapi.io/login")
             .then(res => res.json())
             .then(data => {
                 const user = data.find(
@@ -29,7 +34,7 @@ export default function Login() {
 
                 if (user) {
                     console.log("نقش:", user.roll);
-                    navigate("/OTP",{ state: { phone: user.phone, role: user.roll}});
+                    navigate("/OTP", { state: { phone: user.phone, role: user.roll, otp: fakeOtp } });
                 } else {
                     alert("شماره موبایل یا رمز عبور اشتباه است");
                 }
@@ -39,6 +44,8 @@ export default function Login() {
                 alert("مشکل در ارتباط با سرور");
             });
     }
+
+
 
     return (
         <div className='container'>
