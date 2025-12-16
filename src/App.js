@@ -7,6 +7,7 @@ export default function App() {
     <HashRouter>
       <Routes>
         <Route path="/" element={<Login />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/OTP" element={<OTP />} />
       </Routes>
     </HashRouter>
