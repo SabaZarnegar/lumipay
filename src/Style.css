@@ -90,3 +90,8 @@ img {
   color: rgb(22, 13, 13);
   transition: 2s;
 }
+
+.countdown-small {
+  font-size: 16px;
+  display: inline;
+}
