@@ -10,7 +10,7 @@ export default function Login() {
     const [isDisabled, setisDisabled] = useState(true);
     const navigate = useNavigate();
 
-    
+
     const fakeOtp = "123456";
 
 
