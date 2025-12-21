@@ -1,5 +1,5 @@
 import { Form, Input, Flex, Statistic } from "antd";
-import Formbutton from './Formbutton';
+import FormButton from './FormButton';
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from "react-router-dom";
 
@@ -71,7 +71,7 @@ export default function OTP() {
                 </p>
 
                 <Form.Item>
-                    <Formbutton
+                    <FormButton
                         text='تایید و ورود'
                         onClick={handleVerifyOtp}
                         disabled={enteredOtp.length !== String(otp)?.length}

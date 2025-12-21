@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Form, Input } from 'antd';
 import { PhoneOutlined } from "@ant-design/icons";
-import Formbutton from './Formbutton';
+import FormButton from './FormButton';
 import { useNavigate } from "react-router-dom";
 
 export default function Login() {
@@ -75,7 +75,7 @@ export default function Login() {
                     />
                 </Form.Item>
 
-                <Formbutton disabled={isDisabled} text='ورود به پنل' onClick={handleLogin} />
+                <FormButton disabled={isDisabled} text='ورود به پنل' onClick={handleLogin} />
                 <p style={{ marginTop: '5%', color: 'gray' }}>رمز عبور خود را فراموش کرده‌اید؟</p>
             </Form>
         </div>
