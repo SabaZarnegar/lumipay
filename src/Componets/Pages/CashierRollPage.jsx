@@ -30,11 +30,11 @@ export default function CashierRollPage() {
                 <WelcomeHead />
                 <Divider />
                 <AlertHead
-                icon={<WarningOutlined />}
-                   action = "تکمیل اکنون"
+                    icon={<WarningOutlined />}
+                    action="تکمیل اکنون"
                     message="پروفایل ناقص:"
                     description="برای ادامه تسویه و برداشت وجه، لازم است پروفایل خود را تکمیل کنید. پروفایل شما 75٪ تکمیل شده است." />
-                     
+
                 {/* Cards */}
                 <Row gutter={[24, 24]}>
                     <TodaySalesCard />
@@ -48,7 +48,7 @@ export default function CashierRollPage() {
                         دسترسی سریع
                     </Typography.Text>
 
-                    <Row gutter={[16, 16]} style={{ marginTop: 16 , marginBottom: 16}}>
+                    <Row gutter={[16, 16]} style={{ marginTop: 16, marginBottom: 16 }}>
                         <PayInPersonCard />
                         <TransactionHistoryCard />
                         <MerchantProfile />

@@ -7,14 +7,14 @@ export default function LegalNotice() {
             <Alert
                 style={{
                     borderRadius: 12,
-                    backgroundColor: "#F5F5F5", // طوسی استاندارد
-                    border: "1px solid #E8E8E8", // حذف رنگ آبی حاشیه
+                    backgroundColor: "#F5F5F5",
+                    border: "1px solid #E8E8E8"
                 }}
                 message={
-                    <Typography.Text style={{ 
-                        fontSize: 13, 
-                        lineHeight: 2, 
-                        color: '#595959' // اصلاح Color به color
+                    <Typography.Text style={{
+                        fontSize: 13,
+                        lineHeight: 2,
+                        color: '#595959'
                     }}>
                         <strong style={{ color: '#262626' }}>سپر حقوقی: </strong>
                         خرید اعتباری قابل استرداد نقدی نیست؛ مسئولیت کیفیت و تحویل کالا با

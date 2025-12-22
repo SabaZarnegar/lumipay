@@ -9,7 +9,9 @@ export default function TodaySalesCard() {
                 title="فروش امروز"
                 extra={<RiseOutlined style={{ color: "green" }} />}
             >
-                <p>خلاصه تراکنش‌های اعتباری امروز</p>
+                <Statistic
+                    title='خلاصه تراکنش‌های اعتباری امروز'
+                />
                 <Row>
                     <Col span={12}>
                         <Statistic

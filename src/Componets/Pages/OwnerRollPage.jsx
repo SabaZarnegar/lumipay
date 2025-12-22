@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout, Row, Typography, Divider } from "antd";
+import { WarningOutlined } from "@ant-design/icons";
 import PageHeader from "./PageHeader";
 import WelcomeHead from "./WelcomeHead";
 import AlertHead from "./AlertHead";
@@ -30,7 +31,13 @@ export default function OwnerRollPage() {
 
                 <WelcomeHead />
                 <Divider />
-                <AlertHead />
+                <AlertHead
+                    icon={<WarningOutlined />}
+                    action="تکمیل اکنون"
+                    message="پروفایل ناقص:"
+                    description="برای ادامه تسویه و برداشت وجه، لازم است پروفایل خود را تکمیل کنید. پروفایل شما 75٪ تکمیل شده است."
+                />
+
 
                 {/* Cards */}
                 <Row gutter={[24, 24]}>
