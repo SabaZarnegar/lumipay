@@ -1,15 +1,22 @@
 import React from 'react'
 import { Alert, Button } from "antd";
 
-export default function AlertHead() {
+
+
+export default function AlertHead({ message, description, action ,icon }) {
     return (
+       <>
+        
         <Alert
+            className='bgd-color'
             type="warning"
-            showIcon
-            message="پروفایل ناقص"
-            description="برای ادامه تسویه و برداشت وجه، لازم است پروفایل خود را تکمیل کنید. پروفایل شما 75٪ تکمیل شده است."
-            action={<Button type="link">تکمیل اکنون</Button>}
+            showIcon 
+            icon={icon}
+            message={message}
+            description={description}
+            action={<Button type="link" >{action}</Button>}
             style={{ marginBottom: 24 }}
         />
+       </>
     )
 }

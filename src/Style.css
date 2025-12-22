@@ -64,7 +64,6 @@ img {
   margin-top: 20px;
   gap: 10px;
   direction: ltr;
-  /* اضافه کن */
 }
 
 .otp-box {
@@ -88,7 +87,6 @@ img {
 }
 
 .hover-text:hover {
-  /* هر بلایی می‌خوای سرش بیاری */
   color: rgb(22, 13, 13);
   transition: 2s;
 }
@@ -115,3 +113,16 @@ img {
   max-width: 0 auto 10px;
   color: #6B4EFF;
 }
+
+.bgd-color .ant-alert-description {
+    color: rgb(160, 64, 14) !important;
+}
+
+.bgd-color .ant-alert-message {
+    color: rgb(160, 64, 14) ;
+}
+
+.ant-card-head {
+  border-bottom: none !important;
+}
+

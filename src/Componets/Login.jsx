@@ -34,6 +34,10 @@ export default function Login() {
 
                 if (user) {
                     console.log("نقش:", user.roll);
+                    localStorage.setItem("userPhone" , user.phone);
+                    localStorage.setItem("userRole" , user.roll);
+                    
+
                     navigate("/OTP", { state: { phone: user.phone, role: user.roll, otp: fakeOtp } });
                 } else {
                     alert("شماره موبایل یا رمز عبور اشتباه است");
