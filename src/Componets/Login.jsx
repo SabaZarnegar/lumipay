@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Form, Input } from 'antd';
+import { Form, Input , message} from 'antd';
 import { PhoneOutlined } from "@ant-design/icons";
 import FormButton from './FormButton';
 import { useNavigate } from "react-router-dom";
@@ -33,10 +33,14 @@ export default function Login() {
                 );
 
                 if (user) {
+                    if (Number(user.isActive) === 0) {
+                        message.warning("پذیرنده غیرفعال است. لطفاً با پشتیبانی تماس بگیرید.");
+                        return;
+                    }
+
                     console.log("نقش:", user.roll);
-                    localStorage.setItem("userPhone" , user.phone);
-                    localStorage.setItem("userRole" , user.roll);
-                    
+                    localStorage.setItem("userPhone", user.phone);
+                    localStorage.setItem("userRole", user.roll);
 
                     navigate("/OTP", { state: { phone: user.phone, role: user.roll, otp: fakeOtp } });
                 } else {
