@@ -1,19 +1,19 @@
 import React from 'react'
 import { Typography, Button, Space } from "antd";
 import { LogoutOutlined } from "@ant-design/icons";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function PageHeader() {
 
     const userPhone = localStorage.getItem("userPhone");
     const userRole = localStorage.getItem("userRole");
 
-//     const navigate = useNavigate();
+    const navigate = useNavigate();
 
-//    function HandleLogOut(){
-//     localStorage.clear();
-//      navigate("/Login");
-//     }
+    function HandleLogOut() {
+        localStorage.clear();
+        navigate("/Login");
+    }
 
     return (
         <Space align="start" style={{ width: "100%", justifyContent: "space-between" }}>
@@ -28,7 +28,7 @@ export default function PageHeader() {
                     <br />
                     <Typography.Text type="secondary">{userRole}</Typography.Text>
                 </div>
-                <Button icon={<LogoutOutlined />}>خروج</Button>
+                <Button onClick={HandleLogOut} icon={<LogoutOutlined />}>خروج</Button>
             </Space>
 
         </Space>
