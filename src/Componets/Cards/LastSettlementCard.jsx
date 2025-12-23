@@ -4,8 +4,9 @@ import { WalletOutlined } from "@ant-design/icons";
 
 export default function LastSettlementCard() {
     return (
-        <Col xxl={8} xl={8} lg={12} md={24}>
+        <Col xxl={8} xl={8} lg={12} md={24} className="equalHeightCol">
             <Card
+                className="equalHeightCard"
                 title="آخرین تسویه"
                 extra={<WalletOutlined />}
             >

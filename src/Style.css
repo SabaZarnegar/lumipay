@@ -1,12 +1,11 @@
+/* Mrs Zarnegar */
 body {
   margin: 0;
   padding: 0;
   direction: rtl;
   background-color: rgb(249, 250, 251);
   font-family: 'B Titr';
-
 }
-
 
 .container {
   display: grid;
@@ -14,7 +13,6 @@ body {
   place-items: center;
   height: 100vh;
 }
-
 
 .my-form .ant-input::placeholder {
   text-align: left;
@@ -96,7 +94,17 @@ img {
   display: inline;
 }
 
+.bgd-color .ant-alert-description {
+  color: rgb(160, 64, 14) !important;
+}
 
+.bgd-color .ant-alert-message {
+  color: rgb(160, 64, 14);
+}
+
+
+
+/* Mr Norouzi */
 .minimalCards {
   text-align: center;
   border-radius: 12px;
@@ -114,15 +122,26 @@ img {
   color: #6B4EFF;
 }
 
-.bgd-color .ant-alert-description {
-    color: rgb(160, 64, 14) !important;
-}
-
-.bgd-color .ant-alert-message {
-    color: rgb(160, 64, 14) ;
-}
-
 .ant-card-head {
   border-bottom: none !important;
 }
 
+.equalHeightCol {
+  display: flex;
+}
+
+.equalHeightCard {
+  width: 100%;
+  height: 100%;
+  border-radius: 20px !important;
+}
+
+.legalNoticeText {
+  margin: 0;
+  text-align: center;
+  font-size: 13px;
+  line-height: 2;
+  color: #595959;
+  white-space: normal;
+  word-break: break-word;
+}

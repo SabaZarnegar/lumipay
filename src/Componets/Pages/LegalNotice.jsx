@@ -11,16 +11,12 @@ export default function LegalNotice() {
                     border: "1px solid #E8E8E8"
                 }}
                 message={
-                    <Typography.Text style={{
-                        fontSize: 13,
-                        lineHeight: 2,
-                        color: '#595959'
-                    }}>
-                        <strong style={{ color: '#262626', textAlign: 'center' }}>سپر حقوقی: </strong>
+                    <Typography.Paragraph className='legalNoticeText'>
+                        <strong style={{ color: "#262626" }}>سپر حقوقی: </strong>
                         خرید اعتباری قابل استرداد نقدی نیست؛ مسئولیت کیفیت و تحویل کالا با
                         فروشگاه است؛ Repco/LumiPay فقط بستر پرداخت و تسویه است و هیچ
                         مسئولیتی در قبال محصولات یا خدمات ارائه شده توسط پذیرنده ندارد.
-                    </Typography.Text>
+                    </Typography.Paragraph>
                 }
             />
         </div>

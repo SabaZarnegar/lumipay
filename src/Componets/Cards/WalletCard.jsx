@@ -4,8 +4,12 @@ import { CreditCardOutlined } from "@ant-design/icons";
 
 export default function WalletCard() {
     return (
-        <Col xxl={8} xl={8} lg={12} md={24}>
-            <Card title="کیف پول" extra={<CreditCardOutlined />}>
+        <Col xxl={8} xl={8} lg={12} md={24} className="equalHeightCol">
+            <Card
+                className="equalHeightCard"
+                title="کیف پول"
+                extra={<CreditCardOutlined />}
+            >
                 <Statistic
                     title="موجودی قابل برداشت"
                     value={'۱۲٬۴۵۸٬۰۰۰'}
