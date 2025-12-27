@@ -1,9 +1,10 @@
 import React from 'react'
 import { Typography, Button, Space } from "antd";
-import { LogoutOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
 
-export default function PageHeader() {
+import { useNavigate } from "react-router-dom";
+import ExitButton from '../ExitButton'
+
+export default function PageHeader({title}) {
 
     const userPhone = localStorage.getItem("userPhone");
     const userRole = localStorage.getItem("userRole");
@@ -19,7 +20,7 @@ export default function PageHeader() {
         <Space align="start" style={{ width: "100%", justifyContent: "space-between" }}>
 
             <Typography.Text strong>
-                فروشگاه دیجیتال آرمان | LumiPay
+               {title}
             </Typography.Text>
 
             <Space align="start" style={{ lineHeight: 1 }}>
@@ -28,7 +29,7 @@ export default function PageHeader() {
                     <br />
                     <Typography.Text type="secondary">{userRole}</Typography.Text>
                 </div>
-                <Button onClick={HandleLogOut} icon={<LogoutOutlined />}>خروج</Button>
+                <ExitButton title="خروج"/>
             </Space>
 
         </Space>

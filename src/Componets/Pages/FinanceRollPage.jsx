@@ -22,7 +22,7 @@ export default function FinanceRollPage() {
 
             {/* Header */}
             <Header style={{ background: "#fff", padding: "0 24px" }}>
-                <PageHeader />
+                <PageHeader title=" فروشگاه دیجیتال آرمان | LumiPay"/>
             </Header>
 
 
