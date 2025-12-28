@@ -20,7 +20,7 @@ export default function PageHeader({title}) {
         <Space align="start" style={{ width: "100%", justifyContent: "space-between" }}>
 
             <Typography.Text strong>
-               {title}
+               {title }
             </Typography.Text>
 
             <Space align="start" style={{ lineHeight: 1 }}>
@@ -29,7 +29,7 @@ export default function PageHeader({title}) {
                     <br />
                     <Typography.Text type="secondary">{userRole}</Typography.Text>
                 </div>
-                <ExitButton title="خروج"/>
+                <ExitButton title="خروج" onClick={HandleLogOut}/>
             </Space>
 
         </Space>
