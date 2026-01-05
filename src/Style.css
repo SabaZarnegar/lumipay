@@ -160,7 +160,7 @@ img {
   background: #F5F2FF;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: right;
   max-width: 0 auto 10px;
   color: #6B4EFF;
 }
