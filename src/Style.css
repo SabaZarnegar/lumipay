@@ -30,7 +30,7 @@ body {
   color: gray;
 }
 
-.my-form {
+.login-form {
   width: 400px;
   height: 530px;
   padding: 20px;
@@ -39,6 +39,28 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 3%;
   background-color: rgb(255, 255, 255);
+}
+
+.sales-form {
+  width: 500px;
+  height: 350px;
+  padding: 20px;
+  text-align: center;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 3%;
+  background-color: rgb(255, 255, 255);
+}
+
+.sales-container {
+  display: grid;
+  justify-content: center;
+  place-items: center;
+  height: 50vh;
+}
+
+.sales-header {
+  text-align: right;
 }
 
 img {
@@ -102,9 +124,26 @@ img {
   color: rgb(160, 64, 14);
 }
 
-.pages-img{
+.pages-img {
   display: block;
 }
+
+.header-style {
+  background: #fff;
+  padding: 0 24px;
+  height: auto;
+  line-height: normal;
+  display: flex;
+  align-Items: center;
+}
+
+.header-title-style {
+  display: flex;
+  align-Items: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
 
 
 
