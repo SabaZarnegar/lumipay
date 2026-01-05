@@ -5,11 +5,13 @@ import OTP from './Componets/OTP';
 import CashierRollPage from './Componets/Pages/CashierRollPage';
 import OwnerRollPage from './Componets/Pages/OwnerRollPage';
 import FinanceRollPage from './Componets/Pages/FinanceRollPage';
+// import TodaySalesPage from './Componets/Pages/TodaySalesPage';
+
 
 
 export default function App() {
   return (
-    <HashRouter>
+   <HashRouter>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/Login" element={<Login />} />
