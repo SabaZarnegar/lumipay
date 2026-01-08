@@ -52,12 +52,8 @@ body {
   text-align: right;
   border: none;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  /* سایه ملایم‌تر */
   border-radius: 15px;
-  /* لبه‌های گردتر برای ظاهر مدرن */
   background-color: #ffffff;
-
-  /* انیمیشن برای تغییر نرم ارتفاع */
   transition: all ease 5s;
   overflow: hidden;
 }
