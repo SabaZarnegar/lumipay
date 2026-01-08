@@ -43,14 +43,52 @@ body {
 
 .sales-form {
   width: 570px;
-  height: 370px;
+  /* ارتفاع ثابت را کاملاً حذف کنید */
+  height: auto;
+  /* یک حداقل ارتفاع کم بگذارید که فرم خیلی تخت نباشد */
+  min-height: 200px;
   padding: 20px;
-  margin-top: 20px;
-  text-align: center;
+  margin-top: 200px;
+  text-align: right;
   border: none;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 3%;
-  background-color: rgb(255, 255, 255);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 15px;
+  background-color: #ffffff;
+  transition: all ease 5s;
+  overflow: hidden;
+}
+
+
+.expanded-form {
+  margin-Top: 20px;
+  padding: 10px;
+  border: 1px solid #e8e8e8;
+  border-Radius: 8px;
+  background: rgb(245, 245, 245)
+}
+
+.credit {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.Credit-check {
+  margin-top: 20px;
+  height: 45px;
+  background-color: rgb(75, 49, 101);
+}
+
+.new-Credit-check {
+  margin-top: 20px;
+  height: 45px;
+  background-color: white;
+  color: black;
 }
 
 .sales-container {
@@ -101,7 +139,7 @@ img {
 
 .otp-box:focus {
   border-color: #007bff;
-  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  box-shadow: 0 0 5px rgba(127, 127, 130, 0.5);
 }
 
 .color {
@@ -147,9 +185,10 @@ img {
 }
 
 .input-color {
-  background-color: rgb(245, 245, 245);
+  background-color: rgb(243, 243, 245);
   text-align: left;
 }
+
 
 
 
