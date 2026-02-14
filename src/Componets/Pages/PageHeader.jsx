@@ -9,7 +9,7 @@ export default function PageHeader({ title, showUserInfo = true, style }) {
   const userRole = localStorage.getItem("userRole");
   const navigate = useNavigate();
 
-  function HandleLogOut() {
+  function handleLogOut() {
     localStorage.clear();
     navigate("/Login");
   }
@@ -32,7 +32,7 @@ export default function PageHeader({ title, showUserInfo = true, style }) {
             <br />
             <Typography.Text type="secondary">{userRole}</Typography.Text>
           </div>
-          <ExitButton title="خروج" onClick={HandleLogOut} />
+          <ExitButton title="خروج" onClick={handleLogOut} />
         </Space>
       )}
     </Space>
