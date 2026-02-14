@@ -57,7 +57,7 @@ export default function Login() {
 
     return (
         <div className='container'>
-            <Form className='login-form' layout="vertical">
+            <Form className='form' layout="vertical">
                 <img src={`${process.env.PUBLIC_URL}/ax.png`} alt="logo" className='img' />
 
                 <p className='p-first'><b>ورود به پنل LumiPay</b></p>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Col, Card, Typography } from "antd";
 import { CreditCardOutlined } from "@ant-design/icons";
 
-export default function PayInPersonCard() {
+export default function PayInPersonCard({onClick , style}) {
     return (
         <Col xxl={6} xl={6} lg={12} md={12} sm={24}>
             <Card hoverable className="minimalCards">
@@ -10,7 +10,7 @@ export default function PayInPersonCard() {
                     <CreditCardOutlined />
                 </div>
 
-                <Typography.Text strong>
+                <Typography.Text strong onClick={onClick} style={style}>
                     پرداخت حضوری
                 </Typography.Text>
                 <br />
