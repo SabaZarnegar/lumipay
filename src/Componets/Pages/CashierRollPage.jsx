@@ -20,7 +20,7 @@ export default function CashierRollPage() {
 
             {/* Header */}
             <Header style={{ background: "#fff", padding: "0 24px" }}>
-                <PageHeader title=" فروشگاه دیجیتال آرمان | LumiPay"/>
+                <PageHeader title=" فروشگاه دیجیتال آرمان | LumiPay" />
             </Header>
 
 

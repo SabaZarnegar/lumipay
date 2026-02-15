@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Form, Input , message} from 'antd';
+import { Form, Input, message } from 'antd';
 import { PhoneOutlined } from "@ant-design/icons";
 import FormButton from './FormButton';
 import { useNavigate } from "react-router-dom";
@@ -57,7 +57,7 @@ export default function Login() {
 
     return (
         <div className='container'>
-            <Form className='login-form' layout="vertical">
+            <Form className='form' layout="vertical">
                 <img src={`${process.env.PUBLIC_URL}/ax.png`} alt="logo" className='img' />
 
                 <p className='p-first'><b>ورود به پنل LumiPay</b></p>
@@ -65,6 +65,7 @@ export default function Login() {
 
                 <Form.Item label="*شماره موبایل" name='phone'>
                     <Input
+                        className='input-color'
                         value={phone}
                         onChange={(e) => setphone(e.target.value)}
                         placeholder='09xxxxxxxxx'
@@ -76,6 +77,7 @@ export default function Login() {
 
                 <Form.Item label="*رمز عبور" name='password'>
                     <Input.Password
+                        className='input-color'
                         value={password}
                         onChange={(e) => setpassword(e.target.value)}
                         placeholder='حداقل 6 کاراکتر'

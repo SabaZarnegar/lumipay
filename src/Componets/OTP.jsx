@@ -33,7 +33,7 @@ export default function OTP() {
 
     return (
         <div className='container'>
-            <Form className='my-form' layout="vertical">
+            <Form className='form' layout="vertical">
                 <LumipayImg />
 
                 <p className='p-padding'>کد تایید ارسال شد</p>

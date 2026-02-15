@@ -1,6 +1,7 @@
 import React from "react";
 import { Layout, Row, Typography, Divider } from "antd";
 import { WarningOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router-dom";
 import PageHeader from "./PageHeader";
 import WelcomeHead from "./WelcomeHead";
 import AlertHead from "./AlertHead";
@@ -15,14 +16,22 @@ import LegalNotice from "./LegalNotice";
 
 const { Header, Content } = Layout;
 
+
+
 export default function OwnerRollPage() {
+    const navigate = useNavigate();
+
+    function handleNextpage(){
+    navigate("/PayInPersonPage");
+}
+
     return (
 
         <Layout style={{ minHeight: "100vh", background: "#f5f5f5" }}>
 
             {/* Header */}
             <Header style={{ background: "#fff", padding: "0 24px" }}>
-                <PageHeader title=" فروشگاه دیجیتال آرمان | LumiPay"/>
+                <PageHeader title=" فروشگاه دیجیتال آرمان | LumiPay" />
             </Header>
 
 
@@ -55,7 +64,7 @@ export default function OwnerRollPage() {
                     </Typography.Text>
 
                     <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
-                        <PayInPersonCard />
+                        <PayInPersonCard style={{ cursor: "pointer" }} onClick={handleNextpage} />
                         <TransactionHistoryCard />
                         <WithdrawalCard />
                         <MerchantProfile />
