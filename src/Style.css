@@ -205,10 +205,11 @@ img {
   background: #F5F2FF;
   display: flex;
   align-items: center;
-  justify-content: right;
+  justify-content: center;
   max-width: 0 auto 10px;
   color: #6B4EFF;
-padding-right: 10px;}
+  /* padding-right: 10px; */
+}
 
 .ant-card-head {
   border-bottom: none !important;
