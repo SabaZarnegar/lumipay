@@ -208,7 +208,7 @@ img {
   justify-content: right;
   max-width: 0 auto 10px;
   color: #6B4EFF;
-}
+padding-right: 10px;}
 
 .ant-card-head {
   border-bottom: none !important;
