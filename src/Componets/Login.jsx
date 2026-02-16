@@ -63,7 +63,12 @@ export default function Login() {
                 <p className='p-first'><b>ورود به پنل LumiPay</b></p>
                 <p style={{ color: 'gray' }}><b>پنل مدیریت پذیرندگان</b></p>
 
-                <Form.Item label="*شماره موبایل" name='phone'>
+                <Form.Item name='phone' label={
+                    <>
+                    شماره موبایل
+                     <span style={{ color: "red", marginRight: 4 }}>*</span>
+                    </>
+                } >
                     <Input
                         className='input-color'
                         value={phone}
@@ -72,10 +77,17 @@ export default function Login() {
                         prefix={<PhoneOutlined style={{ color: "gray" }} />}
                         style={{ width: "100%" }}
                     />
+                    <p className='text'>شماره موبایل ثبت شده در سیستم را وارد نمایید</p>
                 </Form.Item>
-                <p className='text'>شماره موبایل ثبت شده در سیستم را وارد نمایید</p>
+                
 
-                <Form.Item label="*رمز عبور" name='password'>
+                <Form.Item name='password' label={
+                    <>
+                    رمز عبور
+                     <span style={{ color: "red", marginRight: 4 }}>*</span>
+                    </>
+                } >
+                    
                     <Input.Password
                         className='input-color'
                         value={password}

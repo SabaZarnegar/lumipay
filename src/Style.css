@@ -25,20 +25,31 @@ body {
 }
 
 .text {
-  margin: 0;
+  /* margin-top: 10px; */
   text-align: right;
   color: gray;
+ 
 }
 
 .form {
   width: 400px;
-  height: 530px;
-  padding: 20px;
+   height: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 0%;
   text-align: center;
   border: none;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 3%;
   background-color: rgb(255, 255, 255);
+}
+
+.form .ant-form-item {
+  margin-bottom: 14px;
+}
+
+.form .ant-form-item-label {
+  padding-bottom: 2px;
 }
 
 .sales-form {
@@ -106,6 +117,7 @@ body {
 img {
   width: 100px;
   height: auto;
+  padding-top: 10px;
 }
 
 .big-btn {
@@ -208,7 +220,7 @@ img {
   justify-content: center;
   max-width: 0 auto 10px;
   color: #6B4EFF;
-  /* padding-right: 10px; */
+  
 }
 
 .ant-card-head {
