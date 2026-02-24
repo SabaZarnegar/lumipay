@@ -6,6 +6,7 @@ import CashierRollPage from './Componets/Pages/CashierRollPage';
 import OwnerRollPage from './Componets/Pages/OwnerRollPage';
 import FinanceRollPage from './Componets/Pages/FinanceRollPage';
 import PayInPersonPage from './Componets/Pages/PayInPersonPage';
+import WalletSetelment from './Componets/Pages/WalletSettelment'
 
 
 
@@ -20,6 +21,7 @@ export default function App() {
         <Route path="/OwnerRollPage" element={<OwnerRollPage />} />
         <Route path="/FinanceRollPage" element={<FinanceRollPage />} />
         <Route path="/CashierRollPage" element={<CashierRollPage />} />
+        <Route path="/WalletSetelment" element={<WalletSetelment />} />
         <Route path="*" element={<div>صفحه مورد نظر یافت نشد (404)</div>} />
       </Routes>
     </HashRouter>

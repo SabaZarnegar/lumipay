@@ -1,7 +1,6 @@
 import React from "react";
-import { Layout, Row, Typography, Divider } from "antd";
+import { Layout, Row, Typography } from "antd";
 import { WarningOutlined } from "@ant-design/icons";
-import { useNavigate } from "react-router-dom";
 import PageHeader from "./PageHeader";
 import WelcomeHead from "./WelcomeHead";
 import AlertHead from "./AlertHead";
@@ -13,33 +12,35 @@ import TransactionHistoryCard from "../Cards/TransactionHistoryCard";
 import WithdrawalCard from "../Cards/WithdrawalCard";
 import MerchantProfile from "../Cards/MerchantProfile";
 import LegalNotice from "./LegalNotice";
+import LumipayImg from '../LumipayImg'
 
 const { Header, Content } = Layout;
 
-
-
 export default function OwnerRollPage() {
-    const navigate = useNavigate();
-
-    function handleNextpage(){
-    navigate("/PayInPersonPage");
-}
-
     return (
-
         <Layout style={{ minHeight: "100vh", background: "#f5f5f5" }}>
+           <Header className='header-style'>
+                    <div className='header-title-style'>
+                        <LumipayImg width={50} height={50} />
 
-            {/* Header */}
-            <Header style={{ background: "#fff", padding: "0 24px" }}>
-                <PageHeader title=" فروشگاه دیجیتال آرمان | LumiPay" />
-            </Header>
+                        {/* گذاشتیم که دو تا متن اصلیو ستونی قرار بده */}
+                        <div style={{ display: "flex", flexDirection: "column", marginRight: "12px", flex: 1 }}>
+                            <PageHeader title="فروشگاه دیجیتال آرمان" showUserInfo={true} style={{ margin: 0, padding: 10 }} />
+                            <Typography.Text type="secondary" style={{ fontSize: "12px", marginTop: "-4px" }}>
+                                  کد پذیرنده: MRC-12345
+                            </Typography.Text>
+                        </div>
+
+                    </div>
+                </Header>
 
 
             {/* Content */}
-            <Content style={{ padding: 24 }}>
+            <Content style={{ padding: 20 }}>
+                <div style={{ marginBottom: 24 }}>
+                    <WelcomeHead />
+                </div>
 
-                <WelcomeHead />
-                <Divider />
                 <AlertHead
                     icon={<WarningOutlined />}
                     action="تکمیل اکنون"
@@ -64,9 +65,9 @@ export default function OwnerRollPage() {
                     </Typography.Text>
 
                     <Row gutter={[16, 16]} style={{ marginTop: 16 }}>
-                        <PayInPersonCard style={{ cursor: "pointer" }} path="/PayInPersonPage" />
+                        <PayInPersonCard path="/PayInPersonPage" />
                         <TransactionHistoryCard />
-                        <WithdrawalCard />
+                        <WithdrawalCard path="/WalletSettelment"/>
                         <MerchantProfile />
                     </Row>
 
