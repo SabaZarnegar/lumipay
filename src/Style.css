@@ -28,12 +28,12 @@ body {
   /* margin-top: 10px; */
   text-align: right;
   color: gray;
- 
+
 }
 
 .form {
   width: 400px;
-   height: auto;
+  height: auto;
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 0%;
@@ -201,7 +201,26 @@ img {
   text-align: left;
 }
 
+.wallet-row {
+  margin: 50px;
+  min-height: 200px;
+  border: 1px rgb(229, 229, 229) solid;
+}
 
+.stat-box {
+   border: 1px  rgb(229, 229, 229) solid;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  padding: 15px;
+  gap: 12px;
+  
+}
+
+.wallet-card1{
+   background-color: rgb(254,246,199);
+}
 
 
 /* Mr Norouzi */
@@ -220,7 +239,7 @@ img {
   justify-content: center;
   max-width: 0 auto 10px;
   color: #6B4EFF;
-  
+
 }
 
 .ant-card-head {
